@@ -24,9 +24,9 @@ export default {
     directives: { tooltip: VTooltip },
 
     props: {
-        value: {
-            type: Number,
-            default: null,
+        allowed: {
+            type: Array,
+            default: () => ([]),
         },
         readonly: {
             type: Boolean,
@@ -40,20 +40,31 @@ export default {
             type: Boolean,
             default: false,
         },
+        value: {
+            type: Number,
+            default: null,
+        },
     },
 
     computed: {
         ...mapState(['enums']),
-        ...mapState('local', ['currencies']),
+        ...mapState('currencies', ['currencies']),
         default() {
             return this.currencies.find(({ isDefault }) => isDefault);
         },
+        allowedCurrencies() {
+            return this.allowed.length > 0 && this.currencies
+                ? this.currencies.filter(({ id }) => this.allowed
+                    .some(currency => currency.id === id))
+                : this.currencies;
+        },
         currency() {
-            return this.currencies
-                && this.currencies.find(({ id }) => id === this.value);
+            return this.allowedCurrencies
+                && this.allowedCurrencies.find(({ id }) => id === this.value);
         },
         index() {
-            return this.currencies.findIndex(({ id }) => id === this.value);
+            return this.allowedCurrencies
+                && this.allowedCurrencies.findIndex(({ id }) => id === this.value);
         },
     },
 
@@ -69,11 +80,11 @@ export default {
                 return;
             }
 
-            const index = this.index === this.currencies.length - 1
+            const index = this.index === this.allowedCurrencies.length - 1
                 ? 0
                 : this.index + 1;
 
-            this.$emit('input', this.currencies[index].id);
+            this.$emit('input', this.allowedCurrencies[index].id);
         },
     },
 };
