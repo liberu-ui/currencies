@@ -1,7 +1,7 @@
 
 export const state = {
     currencies: null,
-    countries: null,
+    countries: [],
     defaultCurrency: null,
 };
 
@@ -26,8 +26,10 @@ export const mutations = {
 
 
 export const actions = {
-    initialise({ commit }, { currencies, countries }) {
+    currencies({ commit }, { currencies }) {
         commit('currencies', currencies);
+    },
+    countries({ commit }, { countries }) {
         commit('countries', countries);
     },
 };
