@@ -1,6 +1,12 @@
 <template>
     <enso-table class="box is-paddingless raises-on-hover"
-        id="currencies"/>
+        id="currencies">
+        <template v-slot:symbol="{column, row}">
+            <span class="tag is-table-tag is-warning">
+                {{ row.symbol }}
+            </span>
+        </template>
+    </enso-table>
 </template>
 
 <script>
