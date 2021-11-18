@@ -40,11 +40,13 @@ export default {
             type: Boolean,
             default: false,
         },
-        value: {
+        modelValue: {
             type: Number,
             default: null,
         },
     },
+
+    emits: ['update:modelValue'],
 
     computed: {
         ...mapState(['enums']),
@@ -60,17 +62,17 @@ export default {
         },
         currency() {
             return this.allowedCurrencies
-                && this.allowedCurrencies.find(({ id }) => id === this.value);
+                && this.allowedCurrencies.find(({ id }) => id === this.modelValue);
         },
         index() {
             return this.allowedCurrencies
-                && this.allowedCurrencies.findIndex(({ id }) => id === this.value);
+                && this.allowedCurrencies.findIndex(({ id }) => id === this.modelValue);
         },
     },
 
     created() {
-        if (!this.value) {
-            this.$emit('input', this.default.id);
+        if (!this.modelValue) {
+            this.$emit('update:modelValue', this.default.id);
         }
     },
 
@@ -84,7 +86,7 @@ export default {
                 ? 0
                 : this.index + 1;
 
-            this.$emit('input', this.allowedCurrencies[index].id);
+            this.$emit('update:modelValue', this.allowedCurrencies[index].id);
         },
     },
 };
