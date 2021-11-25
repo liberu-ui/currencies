@@ -16,12 +16,9 @@
 
 <script>
 import { mapState } from 'vuex';
-import { VTooltip } from 'v-tooltip';
 
 export default {
     name: 'Currencies',
-
-    directives: { tooltip: VTooltip },
 
     props: {
         allowed: {
