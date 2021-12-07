@@ -69,7 +69,7 @@ export default {
                 date: { min: null, max: null },
             },
         },
-        params: { interval: null },
+        params: { interval: 'all' },
     }),
 
     computed: {
