@@ -19,12 +19,8 @@
             <div class="column is-5-desktop">
                 <enso-date-filter class="box raises-on-hover"
                     :name="i18n('Date')"
-                    default="today"
-                    v-model="params.interval"
-                    @update="
-                        intervals.exchange_rates.date.min = $event.min;
-                        intervals.exchange_rates.date.max = $event.max;
-                    "/>
+                    v-model:filter="params.interval"
+                    v-model:interval="intervals.exchange_rates.date"/>
             </div>
         </div>
         <enso-table class="box is-paddingless raises-on-hover"
@@ -69,7 +65,7 @@ export default {
                 date: { min: null, max: null },
             },
         },
-        params: { interval: 'all' },
+        params: { interval: 'today' },
     }),
 
     computed: {
