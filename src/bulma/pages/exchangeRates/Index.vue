@@ -55,7 +55,7 @@ export default {
 
     data: () => ({
         ready: false,
-        apiVersion: 1.0,
+        apiVersion: 2,
         filters: {
             fromCurrencies: { id: null },
             toCurrencies: { id: null },
