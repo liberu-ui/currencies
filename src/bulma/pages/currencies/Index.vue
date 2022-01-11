@@ -1,7 +1,7 @@
 <template>
     <enso-table class="box is-paddingless raises-on-hover"
         id="currencies">
-        <template v-slot:symbol="{column, row}">
+        <template #symbol="{ row }">
             <span class="tag is-table-tag is-warning">
                 {{ row.symbol }}
             </span>
