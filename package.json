@@ -1,6 +1,6 @@
 {
     "name": "@enso-ui/currencies",
-    "version": "4.0.13",
+    "version": "5.0.0",
     "description": "Currencies package",
     "main": "src/bulma/pages/currencies/Index.vue",
     "scripts": {
