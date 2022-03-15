@@ -24,12 +24,3 @@ export const mutations = {
     countries: (state, countries) => (state.countries = countries),
 };
 
-
-export const actions = {
-    currencies({ commit }, { currencies }) {
-        commit('currencies', currencies);
-    },
-    countries({ commit }, { countries }) {
-        commit('countries', countries);
-    },
-};
