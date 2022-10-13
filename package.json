@@ -28,7 +28,7 @@
         "@fortawesome/fontawesome-svg-core": "^1.2.2",
         "@fortawesome/free-regular-svg-icons": "^5.2.0",
         "@fortawesome/free-solid-svg-icons": "^5.11.2",
-        "axios": "^0.21.1",
+        "axios": "^0.27.0",
         "vue": "^3.0",
         "vuex": "^4.0.0"
     },
