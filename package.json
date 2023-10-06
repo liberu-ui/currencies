@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/enso-ui/currencies.git"
+        "url": "git+https://github.com/liberu-ui/currencies.git"
     },
     "keywords": [
         "currencies",
@@ -17,9 +17,9 @@
     "author": "Adrian Ocneanu <aocneanu@gmail.com>",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/enso-ui/currencies/issues"
+        "url": "https://github.com/liberu-ui/currencies/issues"
     },
-    "homepage": "https://github.com/enso-ui/currencies#readme",
+    "homepage": "https://github.com/liberu-ui/currencies#readme",
     "dependencies": {
         "@liberu-ui/filters": "^3.0",
         "@liberu-ui/forms": "^3.0",

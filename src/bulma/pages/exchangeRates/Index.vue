@@ -40,9 +40,9 @@
 
 <script>
 import { mapState } from 'vuex';
-import { EnsoDateFilter, EnsoSelectFilter } from '@enso-ui/filters/bulma';
-import { FilterState } from '@enso-ui/filters/renderless';
-import { EnsoTable } from '@enso-ui/tables/bulma';
+import { EnsoDateFilter, EnsoSelectFilter } from '@liberu-ui/filters/bulma';
+import { FilterState } from '@liberu-ui/filters/renderless';
+import { EnsoTable } from '@liberu-ui/tables/bulma';
 
 export default {
     name: 'Index',

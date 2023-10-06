@@ -7,7 +7,7 @@ The component cannot be used outside of the Liberu ecosystem.
 
 Install the package:
 ```
-yarn add @enso-ui/currencies
+yarn add @liberu-ui/currencies
 ```
 
 ## Contributions
