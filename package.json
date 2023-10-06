@@ -1,6 +1,6 @@
 {
     "name": "@liberu-ui/currencies",
-    "version": "5.0.2",
+    "version": "5.0.3",
     "description": "Currencies package",
     "main": "src/bulma/pages/currencies/Index.vue",
     "scripts": {
