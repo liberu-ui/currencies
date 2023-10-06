@@ -1,5 +1,5 @@
 import axios from 'axios';
-import route from '@enso-ui/ui/src/modules/plugins/route';
+import route from '@liberu-ui/ui/src/modules/plugins/route';
 
 class Conversion {
     constructor() {
